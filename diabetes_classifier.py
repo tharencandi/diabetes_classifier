@@ -10,7 +10,7 @@ TESTING_FILE = "./test.csv"
 def distance(A, B):
     result = 0
     ssum = 0
-    for i in range(7):
+    for i in range(8):
         ssum += (A[i] - B[i])*(A[i] - B[i])
     result = math.sqrt(ssum)
     return result
