@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     diabetes_norm
+Instances:    767
+Attributes:   9
+              0.352941
+              0.670968
+              0.489796
+              0.304348
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: no
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         500               65.189  %
+Incorrectly Classified Instances       267               34.811  %
+Kappa statistic                          0     
+Mean absolute error                      0.454 
+Root mean squared error                  0.4764
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.652      1.000    0.789      ?        0.496     0.650     no
+                 0.000    0.000    ?          0.000    ?          ?        0.496     0.346     yes
+Weighted Avg.    0.652    0.652    ?          0.652    ?          ?        0.496     0.544     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 500   0 |   a = no
+ 267   0 |   b = yes
+

@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     diabetes_CFS
+Instances:    767
+Attributes:   6
+              0.670968
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         521               67.927  %
+Incorrectly Classified Instances       246               32.073  %
+Kappa statistic                          0.2946
+Mean absolute error                      0.3212
+Root mean squared error                  0.5655
+Relative absolute error                 70.7604 %
+Root relative squared error            118.7119 %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.752    0.457    0.755      0.752    0.754      0.295    0.648     0.734     no
+                 0.543    0.248    0.539      0.543    0.541      0.295    0.648     0.459     yes
+Weighted Avg.    0.679    0.384    0.680      0.679    0.680      0.295    0.648     0.638     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 376 124 |   a = no
+ 122 145 |   b = yes
+

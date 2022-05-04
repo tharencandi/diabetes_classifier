@@ -1,0 +1,57 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     diabetes_CFS
+Instances:    767
+Attributes:   6
+              0.670968
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+0.670968:
+	< 0.454839	-> no
+	< 0.4612905	-> yes
+	< 0.5387095	-> no
+	< 0.545161	-> yes
+	< 0.5774195	-> no
+	< 0.5903225	-> yes
+	< 0.6419355	-> no
+	< 0.7	-> yes
+	< 0.7129030000000001	-> no
+	>= 0.7129030000000001	-> yes
+(586/767 instances correct)
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         543               70.7953 %
+Incorrectly Classified Instances       224               29.2047 %
+Kappa statistic                          0.303 
+Mean absolute error                      0.292 
+Root mean squared error                  0.5404
+Relative absolute error                 64.3283 %
+Root relative squared error            113.4429 %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.864    0.584    0.735      0.864    0.794      0.315    0.640     0.723     no
+                 0.416    0.136    0.620      0.416    0.498      0.315    0.640     0.461     yes
+Weighted Avg.    0.708    0.428    0.695      0.708    0.691      0.315    0.640     0.632     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 432  68 |   a = no
+ 156 111 |   b = yes
+

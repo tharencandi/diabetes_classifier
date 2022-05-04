@@ -1,0 +1,102 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     diabetes_norm
+Instances:    767
+Attributes:   9
+              0.352941
+              0.670968
+              0.489796
+              0.304348
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                 Class
+Attribute           no     yes
+                (0.65)  (0.35)
+===============================
+0.352941
+  mean           0.2014  0.2926
+  std. dev.      0.1774   0.217
+  weight sum        500     267
+  precision      0.0625  0.0625
+
+0.670968
+  mean           0.4304   0.633
+  std. dev.      0.1594  0.1908
+  weight sum        500     267
+  precision      0.0075  0.0075
+
+0.489796
+  mean           0.4787  0.5213
+  std. dev.      0.1214  0.1222
+  weight sum        500     267
+  precision      0.0222  0.0222
+
+0.304348
+  mean           0.2271  0.2701
+  std. dev.      0.0935  0.0936
+  weight sum        500     267
+  precision      0.0204  0.0204
+
+0.169471
+  mean           0.1533  0.1994
+  std. dev.      0.0903  0.1154
+  weight sum        500     267
+  precision      0.0054  0.0054
+
+0.314928
+  mean           0.2594  0.3515
+  std. dev.      0.1329  0.1348
+  weight sum        500     267
+  precision       0.004   0.004
+
+0.234415
+  mean           0.1502  0.2016
+  std. dev.      0.1276   0.159
+  weight sum        500     267
+  precision      0.0019  0.0019
+
+0.483333
+  mean           0.1709  0.2674
+  std. dev.      0.1937  0.1818
+  weight sum        500     267
+  precision      0.0196  0.0196
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         573               74.7066 %
+Incorrectly Classified Instances       194               25.2934 %
+Kappa statistic                          0.4308
+Mean absolute error                      0.2824
+Root mean squared error                  0.4273
+Relative absolute error                 62.2095 %
+Root relative squared error             89.6899 %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.830    0.408    0.792      0.830    0.811      0.432    0.813     0.887     no
+                 0.592    0.170    0.650      0.592    0.620      0.432    0.813     0.658     yes
+Weighted Avg.    0.747    0.325    0.743      0.747    0.744      0.432    0.813     0.807     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 415  85 |   a = no
+ 109 158 |   b = yes
+
