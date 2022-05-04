@@ -1,3 +1,4 @@
+import string
 import numpy as np
 import pandas as p
 import random
@@ -6,13 +7,71 @@ from scipy.stats import norm
 
 TRAINING_FILE = "./diabetes_norm.csv"
 TESTING_FILE = "./test.csv"
+NUM_ATTRIBUTES = 8
 
+
+
+"""
+Shuffle the dataset randomly.
+Split the dataset into k groups
+For each unique group:
+Take the group as a hold out or test data set
+Take the remaining groups as a training data set
+Fit a model on the training set and evaluate it on the test set
+Retain the evaluation score and discard the model
+Summarize the skill of the model using the sample of model evaluation scores
+"""
+def generate_k_folds(filename, k):
+
+    training_df = p.read_csv(filename, header=None )
+    training_df[8] = training_df[8].map({'yes': 1, 'no': 0})
+
+    #seperating classes to numpy arrays and randomise order
+    yes_class = np.array(training_df[training_df[8] == 1].values)
+    no_class =  np.array(training_df[training_df[8] == 0].values)
+    np.random.shuffle(yes_class)
+    np.random.shuffle(no_class)
+
+    yes_rows = yes_class.shape[0]
+    no_rows = no_class.shape[0]
+    folds = []
+    for i in range(1,k+1):
+        fold = []
+        for y in range((i-1)*(yes_rows // k),i *(yes_rows // k)):
+            fold.append(yes_class[y])
+        for n in range((i-1)*(no_rows // k),i *(no_rows // k)):
+            fold.append(no_class[n])
+        folds.append(fold)
+    
+    #remainder
+    for y in range(k * (yes_rows//k), yes_rows):
+        folds[y % len(folds)].append(yes_class[y])
+    for n in range(k * (no_rows // k), no_rows):
+        folds[n % len(folds)].append(no_class[n])
+
+    f = open("folds.csv", "w")
+    s = ""
+    for i in range(len(folds)):
+        s += "fold " + str(i+1) + "\n"
+        for row in folds[i]:
+            for j in range(len(row)):
+                if j == NUM_ATTRIBUTES:
+                    if row[j] == 0:
+                        s += "no"
+                    else:
+                        s+= "yes"
+                else:
+                    s += str(row[j])+","
+            s += "\n"
+        s += "\n"
+    f.write(s)
+    f.close()
 
 # 7 variables
 def distance(A, B):
     result = 0
     ssum = 0
-    for i in range(8):
+    for i in range(NUM_ATTRIBUTES):
         ssum += (A[i] - B[i])*(A[i] - B[i])
     result = math.sqrt(ssum)
     return result
@@ -29,8 +88,8 @@ def classify_nn(training_filename, testing_filename, k):
     training_df = p.read_csv(training_filename, header=None )
     
     training_df[8] = training_df[8].map({'yes': 1, 'no': 0})
-    training = training_df.to_numpy()
-    
+    training = np.array(training_df.values)
+    #training = training_df.to_numpy()
     for to_class in testing:
         D = []
         chosen_class = "no"
@@ -101,7 +160,7 @@ def classify_nb(training_filename, testing_filename):
         c = "no"
         yes = yes_prob
         no = no_prob
-        for i in range(8):
+        for i in range(NUM_ATTRIBUTES):
             y_mean = yes_means[i]
             y_std = yes_stds[i]
             y_a = row[i]
@@ -132,7 +191,8 @@ def classify_nb(training_filename, testing_filename):
     return []
 
 if __name__ == '__main__':
-    c = classify_nn(TRAINING_FILE, TESTING_FILE, 5)
-    b = classify_nb(TRAINING_FILE, TESTING_FILE)
-    print("knn: ", c)
-    print("bayes: ", b)
+    #c = classify_nn(TRAINING_FILE, TESTING_FILE, 5)
+    #b = classify_nb(TRAINING_FILE, TESTING_FILE)
+    #print("knn: ", c)
+    #print("bayes: ", b)
+    generate_k_folds(TRAINING_FILE, 10)
