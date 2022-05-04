@@ -1,0 +1,125 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     diabetes_norm
+Instances:    767
+Attributes:   9
+              0.352941
+              0.670968
+              0.489796
+              0.304348
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -1.4769646750492087
+    Node 2    4.842678837202392
+    Node 3    2.833855955310759
+    Node 4    -3.5753592533303173
+    Node 5    4.295689408845157
+    Node 6    2.2530990129739576
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    1.476964675020331
+    Node 2    -4.842678837040722
+    Node 3    -2.833855955276244
+    Node 4    3.575359253214957
+    Node 5    -4.295689408745248
+    Node 6    -2.2530990129482094
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -6.724901008971989
+    Attrib 0.352941    1.2560515549735582
+    Attrib 0.670968    -0.6120172597576312
+    Attrib 0.489796    -3.763047581512443
+    Attrib 0.304348    2.532249277525912
+    Attrib 0.169471    1.094662251085442
+    Attrib 0.314928    -15.540054209460385
+    Attrib 0.234415    4.593854799373909
+    Attrib 0.483333    -0.8127770207439474
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -9.476858488808077
+    Attrib 0.352941    -2.3578519784115666
+    Attrib 0.670968    -12.054626855286235
+    Attrib 0.489796    5.140475408199052
+    Attrib 0.304348    -2.3781453653035824
+    Attrib 0.169471    4.206869194548457
+    Attrib 0.314928    -2.6935998295839423
+    Attrib 0.234415    1.5106223085185984
+    Attrib 0.483333    -11.328765905761237
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -3.4728787082139547
+    Attrib 0.352941    9.760122108440578
+    Attrib 0.670968    -3.6991031540405963
+    Attrib 0.489796    1.425686851787251
+    Attrib 0.304348    1.101176728037825
+    Attrib 0.169471    -1.682162833977932
+    Attrib 0.314928    -10.20290735808718
+    Attrib 0.234415    6.973954181738341
+    Attrib 0.483333    -4.400070847098305
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -13.922557171403646
+    Attrib 0.352941    1.9139887126573882
+    Attrib 0.670968    -5.49816938882939
+    Attrib 0.489796    -0.2327057446685518
+    Attrib 0.304348    1.725288916155319
+    Attrib 0.169471    -19.100030422796667
+    Attrib 0.314928    -3.9594370814418407
+    Attrib 0.234415    -1.7924008227824304
+    Attrib 0.483333    7.34959108607892
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -10.789766975589767
+    Attrib 0.352941    3.865945207738754
+    Attrib 0.670968    -8.061527796083341
+    Attrib 0.489796    0.8465062370034744
+    Attrib 0.304348    2.881917473799982
+    Attrib 0.169471    5.11932086062317
+    Attrib 0.314928    -7.85006199567202
+    Attrib 0.234415    -14.174522448728839
+    Attrib 0.483333    -11.527427535379582
+Class no
+    Input
+    Node 0
+Class yes
+    Input
+    Node 1
+
+
+Time taken to build model: 0.29 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         576               75.0978 %
+Incorrectly Classified Instances       191               24.9022 %
+Kappa statistic                          0.4421
+Mean absolute error                      0.2931
+Root mean squared error                  0.4176
+Relative absolute error                 64.5587 %
+Root relative squared error             87.6535 %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.828    0.393    0.798      0.828    0.813      0.443    0.809     0.877     no
+                 0.607    0.172    0.653      0.607    0.629      0.443    0.809     0.649     yes
+Weighted Avg.    0.751    0.316    0.747      0.751    0.749      0.443    0.809     0.797     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 414  86 |   a = no
+ 105 162 |   b = yes
+

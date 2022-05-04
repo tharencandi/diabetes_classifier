@@ -1,0 +1,49 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     diabetes_CFS
+Instances:    767
+Attributes:   6
+              0.670968
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.22 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         571               74.4459 %
+Incorrectly Classified Instances       196               25.5541 %
+Kappa statistic                          0.429 
+Mean absolute error                      0.3055
+Root mean squared error                  0.4097
+Relative absolute error                 67.2863 %
+Root relative squared error             86.0129 %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.820    0.397    0.795      0.820    0.807      0.429    0.815     0.889     no
+                 0.603    0.180    0.641      0.603    0.622      0.429    0.815     0.679     yes
+Weighted Avg.    0.744    0.321    0.741      0.744    0.743      0.429    0.815     0.816     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 410  90 |   a = no
+ 106 161 |   b = yes
+

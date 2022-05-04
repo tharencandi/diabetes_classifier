@@ -9,8 +9,6 @@ TRAINING_FILE = "./diabetes_norm.csv"
 TESTING_FILE = "./test.csv"
 NUM_ATTRIBUTES = 8
 
-
-
 """
 Shuffle the dataset randomly.
 Split the dataset into k groups
@@ -42,7 +40,7 @@ def generate_k_folds(filename, k):
         for n in range((i-1)*(no_rows // k),i *(no_rows // k)):
             fold.append(no_class[n])
         folds.append(fold)
-    
+
     #remainder
     for y in range(k * (yes_rows//k), yes_rows):
         folds[y % len(folds)].append(yes_class[y])
@@ -75,18 +73,18 @@ def distance(A, B):
         ssum += (A[i] - B[i])*(A[i] - B[i])
     result = math.sqrt(ssum)
     return result
+
 """
 K nearest neighbour algorithm w/
 Euclidiean distance measurement
 """
 def classify_nn(training_filename, testing_filename, k):
-    
+
     classes = []
-    
+
     testing = np.genfromtxt(testing_filename, delimiter=',')
-    
     training_df = p.read_csv(training_filename, header=None )
-    
+
     training_df[8] = training_df[8].map({'yes': 1, 'no': 0})
     training = np.array(training_df.values)
     #training = training_df.to_numpy()
@@ -96,9 +94,9 @@ def classify_nn(training_filename, testing_filename, k):
         for t_data in training:
             D.append(distance(to_class, t_data))
 
-        d_indicies = np.argsort(D)   
+        d_indicies = np.argsort(D)
         d_indicies = d_indicies[0:k]
-        
+
         num_ones = 0
         for index in d_indicies:
             num_ones += training[index,8]
@@ -109,28 +107,26 @@ def classify_nn(training_filename, testing_filename, k):
         if num_ones >= num_zeros:
             chosen_class = "yes"
 
-        
         classes.append(chosen_class)
+
     return classes
-
-
 
 def classify_nb(training_filename, testing_filename):
     testing = np.genfromtxt(testing_filename, delimiter=',')
-    
+
     training_df = p.read_csv(training_filename, header=None )
     training_df[8] = training_df[8].map({'yes': 1, 'no': 0})
 
     #seperating classes to numpy arrays
     yes_class = training_df[training_df[8] == 1].to_numpy()
     no_class = training_df[training_df[8] == 0].to_numpy()
-  
+
     classes = []
 
     #basic probability of any yes or any no
-    yes_prob = len(yes_class) / len(training_df) 
+    yes_prob = len(yes_class) / len(training_df)
     no_prob = len(no_class)/ len(training_df)
-    
+
     # we need this information to calculate the probability of P(ai | yes) and P(ai | no) from the normal curve
     yes_means = []
     no_means = []
@@ -152,7 +148,6 @@ def classify_nb(training_filename, testing_filename):
         std = np.std(x)
         no_means.append(mean)
         no_stds.append(std)
-
 
     #actually calculate probability of row in input data to be in class yes and no
     #determine its output class
@@ -178,21 +173,10 @@ def classify_nb(training_filename, testing_filename):
         classes.append(c)
 
     return classes
-        
-        
-    
-   
-    
-    
-
-
-
-
-    return []
 
 if __name__ == '__main__':
     #c = classify_nn(TRAINING_FILE, TESTING_FILE, 5)
     #b = classify_nb(TRAINING_FILE, TESTING_FILE)
     #print("knn: ", c)
     #print("bayes: ", b)
-    generate_k_folds(TRAINING_FILE, 10)
+    generate_k_folds(TRAINING_FILE, 100)

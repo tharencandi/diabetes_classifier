@@ -1,0 +1,87 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     diabetes_CFS
+Instances:    767
+Attributes:   6
+              0.670968
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -1.7869737584805183
+    Node 2    3.0901613710695446
+    Node 3    1.8987434773412042
+    Node 4    3.065667401305756
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    1.7869737584805179
+    Node 2    -3.0901613710695446
+    Node 3    -1.8987434773412042
+    Node 4    -3.065667401305755
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -11.751182358045176
+    Attrib 0.670968    -7.1211945006742665
+    Attrib 0.169471    -10.72773784552231
+    Attrib 0.314928    -9.127186876659513
+    Attrib 0.234415    0.16758849897124198
+    Attrib 0.483333    8.029456685945057
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -11.420829915714375
+    Attrib 0.670968    -3.7617665883750386
+    Attrib 0.169471    -2.7029749408035477
+    Attrib 0.314928    -8.509277713653542
+    Attrib 0.234415    -12.481931730574182
+    Attrib 0.483333    0.2250949977237455
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -4.05413205505164
+    Attrib 0.670968    -4.889761050437589
+    Attrib 0.169471    1.892310794589576
+    Attrib 0.314928    -0.17281125766085947
+    Attrib 0.234415    -0.19981137592803008
+    Attrib 0.483333    -7.171912487147747
+Class no
+    Input
+    Node 0
+Class yes
+    Input
+    Node 1
+
+
+Time taken to build model: 0.27 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         596               77.7053 %
+Incorrectly Classified Instances       171               22.2947 %
+Kappa statistic                          0.5023
+Mean absolute error                      0.2982
+Root mean squared error                  0.3968
+Relative absolute error                 65.6793 %
+Root relative squared error             83.2904 %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.844    0.348    0.819      0.844    0.832      0.503    0.828     0.892     no
+                 0.652    0.156    0.690      0.652    0.671      0.503    0.828     0.693     yes
+Weighted Avg.    0.777    0.281    0.775      0.777    0.775      0.503    0.828     0.823     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 422  78 |   a = no
+  93 174 |   b = yes
+

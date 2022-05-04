@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     diabetes_CFS
+Instances:    767
+Attributes:   6
+              0.670968
+              0.169471
+              0.314928
+              0.234415
+              0.483333
+              yes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+0.670968 <= 0.535484
+|   0.314928 <= 0.167689: no (122.0/1.0)
+|   0.314928 > 0.167689
+|   |   0.483333 <= 0.116667: no (188.0/22.0)
+|   |   0.483333 > 0.116667
+|   |   |   0.169471 <= 0.088942: no (22.0)
+|   |   |   0.169471 > 0.088942
+|   |   |   |   0.234415 <= 0.233134: no (116.0/43.0)
+|   |   |   |   0.234415 > 0.233134: yes (37.0/9.0)
+0.670968 > 0.535484
+|   0.314928 <= 0.239264
+|   |   0.670968 <= 0.651613: no (40.0/6.0)
+|   |   0.670968 > 0.651613
+|   |   |   0.169471 <= 0.161058: yes (8.0/1.0)
+|   |   |   0.169471 > 0.161058: no (27.0/11.0)
+|   0.314928 > 0.239264
+|   |   0.670968 <= 0.729032
+|   |   |   0.483333 <= 0.15: no (50.0/23.0)
+|   |   |   0.483333 > 0.15: yes (65.0/19.0)
+|   |   0.670968 > 0.729032: yes (92.0/12.0)
+
+Number of Leaves  : 	11
+
+Size of the tree : 	21
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         577               75.2282 %
+Incorrectly Classified Instances       190               24.7718 %
+Kappa statistic                          0.4474
+Mean absolute error                      0.3139
+Root mean squared error                  0.4158
+Relative absolute error                 69.1516 %
+Root relative squared error             87.2749 %
+Total Number of Instances              767     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.824    0.382    0.802      0.824    0.813      0.448    0.797     0.873     no
+                 0.618    0.176    0.652      0.618    0.635      0.448    0.797     0.621     yes
+Weighted Avg.    0.752    0.310    0.750      0.752    0.751      0.448    0.797     0.785     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 412  88 |   a = no
+ 102 165 |   b = yes
+
