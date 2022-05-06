@@ -2,17 +2,17 @@
 
 Scheme:       weka.classifiers.bayes.NaiveBayes 
 Relation:     diabetes_norm
-Instances:    767
+Instances:    768
 Attributes:   9
-              0.352941
-              0.670968
-              0.489796
-              0.304348
-              0.169471
-              0.314928
-              0.234415
-              0.483333
-              yes
+              1
+              2
+              3
+              4
+              5
+              6
+              7
+              8
+              9
 Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
@@ -20,55 +20,55 @@ Test mode:    10-fold cross-validation
 Naive Bayes Classifier
 
                  Class
-Attribute           no     yes
-                (0.65)  (0.35)
+Attribute          yes      no
+                (0.35)  (0.65)
 ===============================
-0.352941
-  mean           0.2014  0.2926
-  std. dev.      0.1774   0.217
-  weight sum        500     267
+1
+  mean           0.2929  0.2014
+  std. dev.      0.2166  0.1774
+  weight sum        268     500
   precision      0.0625  0.0625
 
-0.670968
-  mean           0.4304   0.633
-  std. dev.      0.1594  0.1908
-  weight sum        500     267
+2
+  mean           0.6332  0.4304
+  std. dev.      0.1904  0.1594
+  weight sum        268     500
   precision      0.0075  0.0075
 
-0.489796
-  mean           0.4787  0.5213
-  std. dev.      0.1214  0.1222
-  weight sum        500     267
+3
+  mean           0.5211  0.4787
+  std. dev.       0.122  0.1214
+  weight sum        268     500
   precision      0.0222  0.0222
 
-0.304348
-  mean           0.2271  0.2701
-  std. dev.      0.0935  0.0936
-  weight sum        500     267
+4
+  mean           0.2703  0.2271
+  std. dev.      0.0934  0.0935
+  weight sum        268     500
   precision      0.0204  0.0204
 
-0.169471
-  mean           0.1533  0.1994
-  std. dev.      0.0903  0.1154
-  weight sum        500     267
+5
+  mean           0.1993  0.1533
+  std. dev.      0.1152  0.0903
+  weight sum        268     500
   precision      0.0054  0.0054
 
-0.314928
-  mean           0.2594  0.3515
-  std. dev.      0.1329  0.1348
-  weight sum        500     267
+6
+  mean           0.3514  0.2594
+  std. dev.      0.1346  0.1329
+  weight sum        268     500
   precision       0.004   0.004
 
-0.234415
-  mean           0.1502  0.2016
-  std. dev.      0.1276   0.159
-  weight sum        500     267
+7
+  mean           0.2017  0.1502
+  std. dev.      0.1587  0.1275
+  weight sum        268     500
   precision      0.0019  0.0019
 
-0.483333
-  mean           0.1709  0.2674
-  std. dev.      0.1937  0.1818
-  weight sum        500     267
+8
+  mean           0.2682  0.1709
+  std. dev.      0.1819  0.1937
+  weight sum        268     500
   precision      0.0196  0.0196
 
 
@@ -78,25 +78,25 @@ Time taken to build model: 0 seconds
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances         573               74.7066 %
-Incorrectly Classified Instances       194               25.2934 %
-Kappa statistic                          0.4308
-Mean absolute error                      0.2824
-Root mean squared error                  0.4273
-Relative absolute error                 62.2095 %
-Root relative squared error             89.6899 %
-Total Number of Instances              767     
+Correctly Classified Instances         577               75.1302 %
+Incorrectly Classified Instances       191               24.8698 %
+Kappa statistic                          0.4425
+Mean absolute error                      0.2819
+Root mean squared error                  0.426 
+Relative absolute error                 62.0134 %
+Root relative squared error             89.3796 %
+Total Number of Instances              768     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.830    0.408    0.792      0.830    0.811      0.432    0.813     0.887     no
-                 0.592    0.170    0.650      0.592    0.620      0.432    0.813     0.658     yes
-Weighted Avg.    0.747    0.325    0.743      0.747    0.744      0.432    0.813     0.807     
+                 0.604    0.170    0.656      0.604    0.629      0.443    0.815     0.661     yes
+                 0.830    0.396    0.797      0.830    0.813      0.443    0.815     0.888     no
+Weighted Avg.    0.751    0.317    0.747      0.751    0.749      0.443    0.815     0.809     
 
 === Confusion Matrix ===
 
    a   b   <-- classified as
- 415  85 |   a = no
- 109 158 |   b = yes
+ 162 106 |   a = yes
+  85 415 |   b = no
 
