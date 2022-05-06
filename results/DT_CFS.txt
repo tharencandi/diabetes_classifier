@@ -2,14 +2,14 @@
 
 Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
 Relation:     diabetes_CFS
-Instances:    767
+Instances:    768
 Attributes:   6
-              0.670968
-              0.169471
-              0.314928
-              0.234415
-              0.483333
-              yes
+              1
+              2
+              3
+              4
+              5
+              6
 Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
@@ -17,56 +17,56 @@ Test mode:    10-fold cross-validation
 J48 pruned tree
 ------------------
 
-0.670968 <= 0.535484
-|   0.314928 <= 0.167689: no (122.0/1.0)
-|   0.314928 > 0.167689
-|   |   0.483333 <= 0.116667: no (188.0/22.0)
-|   |   0.483333 > 0.116667
-|   |   |   0.169471 <= 0.088942: no (22.0)
-|   |   |   0.169471 > 0.088942
-|   |   |   |   0.234415 <= 0.233134: no (116.0/43.0)
-|   |   |   |   0.234415 > 0.233134: yes (37.0/9.0)
-0.670968 > 0.535484
-|   0.314928 <= 0.239264
-|   |   0.670968 <= 0.651613: no (40.0/6.0)
-|   |   0.670968 > 0.651613
-|   |   |   0.169471 <= 0.161058: yes (8.0/1.0)
-|   |   |   0.169471 > 0.161058: no (27.0/11.0)
-|   0.314928 > 0.239264
-|   |   0.670968 <= 0.729032
-|   |   |   0.483333 <= 0.15: no (50.0/23.0)
-|   |   |   0.483333 > 0.15: yes (65.0/19.0)
-|   |   0.670968 > 0.729032: yes (92.0/12.0)
+1 <= 0.535484
+|   3 <= 0.167689: no (122.0/1.0)
+|   3 > 0.167689
+|   |   5 <= 0.116667: no (188.0/22.0)
+|   |   5 > 0.116667
+|   |   |   2 <= 0.088942: no (22.0)
+|   |   |   2 > 0.088942
+|   |   |   |   4 <= 0.233134: no (116.0/43.0)
+|   |   |   |   4 > 0.233134: yes (37.0/9.0)
+1 > 0.535484
+|   3 <= 0.239264
+|   |   1 <= 0.651613: no (40.0/6.0)
+|   |   1 > 0.651613
+|   |   |   2 <= 0.161058: yes (8.0/1.0)
+|   |   |   2 > 0.161058: no (27.0/11.0)
+|   3 > 0.239264
+|   |   1 <= 0.729032
+|   |   |   5 <= 0.15: no (50.0/23.0)
+|   |   |   5 > 0.15: yes (66.0/19.0)
+|   |   1 > 0.729032: yes (92.0/12.0)
 
 Number of Leaves  : 	11
 
 Size of the tree : 	21
 
 
-Time taken to build model: 0.03 seconds
+Time taken to build model: 0.02 seconds
 
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances         577               75.2282 %
-Incorrectly Classified Instances       190               24.7718 %
-Kappa statistic                          0.4474
-Mean absolute error                      0.3139
-Root mean squared error                  0.4158
-Relative absolute error                 69.1516 %
-Root relative squared error             87.2749 %
-Total Number of Instances              767     
+Correctly Classified Instances         563               73.3073 %
+Incorrectly Classified Instances       205               26.6927 %
+Kappa statistic                          0.4181
+Mean absolute error                      0.3125
+Root mean squared error                  0.4328
+Relative absolute error                 68.7562 %
+Root relative squared error             90.8084 %
+Total Number of Instances              768     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.824    0.382    0.802      0.824    0.813      0.448    0.797     0.873     no
-                 0.618    0.176    0.652      0.618    0.635      0.448    0.797     0.621     yes
-Weighted Avg.    0.752    0.310    0.750      0.752    0.751      0.448    0.797     0.785     
+                 0.638    0.216    0.613      0.638    0.625      0.418    0.773     0.592     yes
+                 0.784    0.362    0.802      0.784    0.793      0.418    0.773     0.834     no
+Weighted Avg.    0.733    0.311    0.736      0.733    0.734      0.418    0.773     0.750     
 
 === Confusion Matrix ===
 
    a   b   <-- classified as
- 412  88 |   a = no
- 102 165 |   b = yes
+ 171  97 |   a = yes
+ 108 392 |   b = no
 

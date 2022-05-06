@@ -2,14 +2,14 @@
 
 Scheme:       weka.classifiers.lazy.IBk -K 5 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
 Relation:     diabetes_CFS
-Instances:    767
+Instances:    768
 Attributes:   6
-              0.670968
-              0.169471
-              0.314928
-              0.234415
-              0.483333
-              yes
+              1
+              2
+              3
+              4
+              5
+              6
 Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
@@ -23,25 +23,25 @@ Time taken to build model: 0 seconds
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances         575               74.9674 %
-Incorrectly Classified Instances       192               25.0326 %
-Kappa statistic                          0.4387
-Mean absolute error                      0.312 
-Root mean squared error                  0.4282
-Relative absolute error                 68.7175 %
-Root relative squared error             89.8815 %
-Total Number of Instances              767     
+Correctly Classified Instances         572               74.4792 %
+Incorrectly Classified Instances       196               25.5208 %
+Kappa statistic                          0.4284
+Mean absolute error                      0.3131
+Root mean squared error                  0.4302
+Relative absolute error                 68.8943 %
+Root relative squared error             90.2559 %
+Total Number of Instances              768     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.828    0.397    0.796      0.828    0.812      0.439    0.791     0.857     no
-                 0.603    0.172    0.652      0.603    0.626      0.439    0.791     0.618     yes
-Weighted Avg.    0.750    0.319    0.746      0.750    0.747      0.439    0.791     0.773     
+                 0.597    0.176    0.645      0.597    0.620      0.429    0.782     0.615     yes
+                 0.824    0.403    0.792      0.824    0.808      0.429    0.782     0.839     no
+Weighted Avg.    0.745    0.324    0.741      0.745    0.742      0.429    0.782     0.761     
 
 === Confusion Matrix ===
 
    a   b   <-- classified as
- 414  86 |   a = no
- 106 161 |   b = yes
+ 160 108 |   a = yes
+  88 412 |   b = no
 
