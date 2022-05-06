@@ -2,14 +2,14 @@
 
 Scheme:       weka.classifiers.bayes.NaiveBayes 
 Relation:     diabetes_CFS
-Instances:    767
+Instances:    768
 Attributes:   6
-              0.670968
-              0.169471
-              0.314928
-              0.234415
-              0.483333
-              yes
+              1
+              2
+              3
+              4
+              5
+              6
 Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
@@ -17,37 +17,37 @@ Test mode:    10-fold cross-validation
 Naive Bayes Classifier
 
                  Class
-Attribute           no     yes
-                (0.65)  (0.35)
+Attribute          yes      no
+                (0.35)  (0.65)
 ===============================
-0.670968
-  mean           0.4304   0.633
-  std. dev.      0.1594  0.1908
-  weight sum        500     267
+1
+  mean           0.6332  0.4304
+  std. dev.      0.1904  0.1594
+  weight sum        268     500
   precision      0.0075  0.0075
 
-0.169471
-  mean           0.1533  0.1994
-  std. dev.      0.0903  0.1154
-  weight sum        500     267
+2
+  mean           0.1993  0.1533
+  std. dev.      0.1152  0.0903
+  weight sum        268     500
   precision      0.0054  0.0054
 
-0.314928
-  mean           0.2594  0.3515
-  std. dev.      0.1329  0.1348
-  weight sum        500     267
+3
+  mean           0.3514  0.2594
+  std. dev.      0.1346  0.1329
+  weight sum        268     500
   precision       0.004   0.004
 
-0.234415
-  mean           0.1502  0.2016
-  std. dev.      0.1276   0.159
-  weight sum        500     267
+4
+  mean           0.2017  0.1502
+  std. dev.      0.1587  0.1275
+  weight sum        268     500
   precision      0.0019  0.0019
 
-0.483333
-  mean           0.1709  0.2674
-  std. dev.      0.1937  0.1818
-  weight sum        500     267
+5
+  mean           0.2682  0.1709
+  std. dev.      0.1819  0.1937
+  weight sum        268     500
   precision      0.0196  0.0196
 
 
@@ -57,25 +57,25 @@ Time taken to build model: 0.01 seconds
 === Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances         588               76.6623 %
-Incorrectly Classified Instances       179               23.3377 %
-Kappa statistic                          0.4638
-Mean absolute error                      0.2856
-Root mean squared error                  0.415 
-Relative absolute error                 62.9159 %
-Root relative squared error             87.1168 %
-Total Number of Instances              767     
+Correctly Classified Instances         586               76.3021 %
+Incorrectly Classified Instances       182               23.6979 %
+Kappa statistic                          0.4558
+Mean absolute error                      0.2852
+Root mean squared error                  0.4137
+Relative absolute error                 62.7477 %
+Root relative squared error             86.793  %
+Total Number of Instances              768     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0.868    0.423    0.793      0.868    0.829      0.468    0.824     0.902     no
-                 0.577    0.132    0.700      0.577    0.632      0.468    0.824     0.665     yes
-Weighted Avg.    0.767    0.322    0.761      0.767    0.761      0.468    0.824     0.820     
+                 0.571    0.134    0.695      0.571    0.627      0.461    0.825     0.666     yes
+                 0.866    0.429    0.790      0.866    0.826      0.461    0.825     0.904     no
+Weighted Avg.    0.763    0.326    0.757      0.763    0.757      0.461    0.825     0.821     
 
 === Confusion Matrix ===
 
    a   b   <-- classified as
- 434  66 |   a = no
- 113 154 |   b = yes
+ 153 115 |   a = yes
+  67 433 |   b = no
 
